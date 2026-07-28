@@ -2,6 +2,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 import os
 import base64
+from streamlit_carousel import carousel
 
 st.set_page_config(
     page_title="Hazem Hesham",
@@ -9,9 +10,6 @@ st.set_page_config(
     layout="wide"
 )
 
-# ==============================
-# CSS
-# ==============================
 
 # ==============================
 # CSS
@@ -345,7 +343,7 @@ ul{
 
 selected = option_menu(
 
-    menu_title="🏗️ Hazem Hesham",
+    menu_title="🏗️ Hazem Hesham - Civil & Structural Engineer",
 
 
     options=[
@@ -470,16 +468,6 @@ selected = option_menu(
 
 
 
-
-
-# ==============================
-# HOME
-# ==============================
-
-
-# ==============================
-# HOME
-# ==============================
 
 # ==============================
 # HOME
@@ -718,14 +706,15 @@ translateY(0);
 Бадри Хазем Хешам
 </h1>
 
-<h3>
-Выпускник 2026
-</h3>
+
 
 <h3>
 Промышленное и гражданское строительство
 </h2>
 
+<h4>
+Выпускник 2026
+</h4>
 
 </div>
 
@@ -782,7 +771,7 @@ translateY(0);
     # ==============================
 
 
-    c1,c2,c3,c4 = st.columns(4)
+    c1,c2,c3 = st.columns(3)
 
 
 
@@ -792,12 +781,19 @@ translateY(0);
 
 <div class="card">
 
-<h2>🏢</h2>
+<h2>🏢🏢🏢🏢🏢🏢🏢</h2>
 
-<h3>ПГС</h3>
+<h3>Инженер-конструктор</h3>
 
 <p>
-Промышленное и гражданское строительство
+Разрабатываю проектную и рабочую документацию, создаю чертежи в AutoCAD и Revit, выполняю инженерные расчёты и стремлюсь постоянно развивать профессиональные навыки.
+</p>
+
+<p>
+-📐 Проектирование конструкций<br>
+-📄 Разработка рабочей документации<br>
+-🧮 Расчёты (ЛИРА 10)<br>
+-🖥️ AutoCAD • Revit
 </p>
 
 </div>
@@ -812,12 +808,19 @@ translateY(0);
 
 <div class="card">
 
-<h2>📐</h2>
+<h2>🏗️    🏗️🏗️🏗️🏗️🏗️🏗️🏗️</h2>
 
-<h3>BIM</h3>
+<h3> Инженер ПТО</h3>
 
 <p>
-Revit моделирование
+Подготавливаю исполнительную документацию, оформляю АОСР, журналы работ и ведомости объёмов работ. Быстро осваиваю внутренние стандарты компании и уделяю большое внимание точности документации.
+</p>
+
+<p>
+- 📄 Исполнительная документация<br>
+- 📄 АОСР<br>
+- 📄 Журналы работ<br>
+- 📄 ВОР
 </p>
 
 </div>
@@ -832,32 +835,17 @@ Revit моделирование
 
 <div class="card">
 
-<h2>🐍</h2>
+<h2>💻💻💻💻💻</h2>
 
 <h3>Python</h3>
 
-<p>
-Автоматизация инженерных задач
+<br>
+Создаю инженерные программы для автоматизации рутинных задач, работаю с Excel, Word, PDF и Streamlit. Постоянно совершенствую навыки программирования для повышения эффективности инженерной работы.
 </p>
-
-</div>
-
-""",unsafe_allow_html=True)
-
-
-
-    with c4:
-
-        st.markdown("""
-
-<div class="card">
-
-<h2>🧮</h2>
-
-<h3>LIRA</h3>
-
-<p>
-Расчёт строительных конструкций
+<br>
+- 🖥️ Автоматизация<br>
+- 🖥️ Excel<br>
+- 🖥️ Word
 </p>
 
 </div>
@@ -874,110 +862,10 @@ Revit моделирование
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-# if selected=="Главная":
-    
-#     st.markdown("""
-
-# <div class='hero'>
-# <h1>Бадри Хазем Хешам</h1>
-# <h4>Выпускник ПГС 2026</h4>
-
-
-
-# """,unsafe_allow_html=True)
-
-#     c1,c2,c3 = st.columns(3)
-
-#     with c2:
-#         st.markdown("""
-# <div class='card'>
-# <h3>🏗️ Инженер ПТО</h3>
-# <p>
-# Подготавливаю исполнительную документацию, оформляю АОСР, журналы работ и ведомости объёмов работ. Быстро осваиваю внутренние стандарты компании и уделяю большое внимание точности документации.
-# </p>
-
-# <p>
-# - 📄 Исполнительная документация<br>
-# - 📄 АОСР<br>
-# - 📄 Журналы работ<br>
-# - 📄 ВОР
-# </p>
-
-# </div>
-# """,unsafe_allow_html=True)
-
-#     with c3:
-#         st.markdown("""
-# <div class='card'>
-# <h3>💻 Python</h3>
-# <br>
-# Создаю инженерные программы для автоматизации рутинных задач, работаю с Excel, Word, PDF и Streamlit. Постоянно совершенствую навыки программирования для повышения эффективности инженерной работы.
-# </p>
-# <br>
-# - 🖥️ Автоматизация<br>
-# - 🖥️ Excel<br>
-# - 🖥️ Word
-# </p>
-# </div>
-# """,unsafe_allow_html=True)
-
-#     with c1:
-
-#         st.markdown("""
-# <div class='card'>
-
-# <h3>🏢 Инженер-конструктор</h3>
-
-# <p>
-# Разрабатываю проектную и рабочую документацию, создаю чертежи в AutoCAD и Revit, выполняю инженерные расчёты и стремлюсь постоянно развивать профессиональные навыки.
-# </p>
-
-# <p>
-# -📐 Проектирование конструкций<br>
-# -📄 Разработка рабочей документации<br>
-# -🧮 Расчёты (ЛИРА 10)<br>
-# -🖥️ AutoCAD • Revit
-# </p>
-
-# </div>
-# """, unsafe_allow_html=True)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #=========================================
 #=========================================
+
+
 
 elif selected=="Обо мне":
 
@@ -994,7 +882,7 @@ elif selected=="Обо мне":
             img_base64 = base64.b64encode(img_file.read()).decode()
 
 
-        col_img, col_info = st.columns([1, 3])
+        col_img, col_info = st.columns([1, 7])
 
 
         with col_img:
@@ -1118,18 +1006,604 @@ elif selected=="Обо мне":
 
 
 
+
 #=========================================
 #=========================================
 
 
 
+elif selected=="Проекты":
 
 
-elif selected=="Портфолио":
+    st.markdown("""
+    <style>
 
-    st.header("📂 Портфолио")
 
-    st.info("Здесь будут мои проекты.")
+    /* عنوان المشاريع */
+
+    .project-title{
+
+        font-size:45px;
+        font-weight:900;
+        color:white;
+
+    }
+
+
+    .project-sub{
+
+        color:#94a3b8;
+        font-size:18px;
+        margin-bottom:30px;
+
+    }
+
+
+
+    /* كارت المشروع */
+
+    .project-card{
+
+        background:
+        rgba(30,41,59,.85);
+
+        backdrop-filter:
+        blur(20px);
+
+        padding:35px;
+
+        border-radius:30px;
+
+        color:white;
+
+        box-shadow:
+        0 20px 45px rgba(0,0,0,.4);
+
+        border:
+        1px solid rgba(255,255,255,.08);
+
+    }
+
+
+    .project-card h2{
+
+        font-size:32px;
+
+    }
+
+
+
+    .tag{
+
+        display:inline-block;
+
+        padding:8px 18px;
+
+        margin:5px;
+
+        border-radius:30px;
+
+        background:
+        linear-gradient(
+        90deg,
+        #2563eb,
+        #06b6d4
+        );
+
+        color:white;
+
+        font-size:14px;
+
+        font-weight:bold;
+
+    }
+
+
+
+    /* تعديل السايدبار */
+
+    section[data-testid="stSidebar"]{
+
+        background:
+        transparent;
+
+    }
+
+
+
+    section[data-testid="stSidebar"] > div{
+
+        background:
+        rgba(15,23,42,.85);
+
+        backdrop-filter:
+        blur(20px);
+
+        border-radius:25px;
+
+        margin-top:80px;
+
+        padding:20px;
+
+        box-shadow:
+        0 20px 40px rgba(0,0,0,.4);
+
+    }
+
+
+
+    </style>
+
+    """, unsafe_allow_html=True)
+
+
+
+
+    # ==========================
+    # Sidebar المشاريع
+    # ==========================
+
+
+    st.sidebar.markdown(
+        """
+        <h2 style='color:white;text-align:center'>
+        🏗 Projects
+        </h2>
+        """,
+        unsafe_allow_html=True
+    )
+
+
+    project = st.sidebar.radio(
+
+        "",
+
+        [
+
+            "Project 1",
+            "Project 2",
+            "Project 3",
+            "Project 4",
+            "Project 5",
+            "Project 6",
+            "Project 7",
+            "Project 8",
+            "Project 9",
+            "Project 10"
+
+        ]
+
+    )
+
+
+
+    st.markdown(
+        f"""
+        <div class="project-title">
+        📂 {project}
+        </div>
+
+        <div class="project-sub">
+        Учебные и инженерные проекты
+        </div>
+
+        """,
+        unsafe_allow_html=True
+    )
+
+
+
+
+    # ==========================
+    # PROJECT 1
+    # ==========================
+
+
+    if project=="Project 1":
+
+
+        col1,col2 = st.columns([1,1.5])
+
+
+
+        with col1:
+
+
+            if os.path.exists("122.png"):
+
+                st.image(
+                    "122.png",
+                    use_container_width=True
+                )
+
+            else:
+
+                st.info(
+                "Добавьте изображение проекта"
+                )
+
+
+
+
+        with col2:
+
+
+            st.markdown("""
+            
+            <div class="project-card">
+
+
+            <h2>
+            🏢 11-этажный жилой дом
+            </h2>
+
+
+            <p>
+
+            Выпускной инженерный проект по направлению
+            «Промышленное и гражданское строительство».
+
+            Проект включает разработку конструктивной схемы,
+            рабочей документации и инженерных расчётов.
+
+            </p>
+
+
+
+            <br>
+
+            <b>
+            Выполнено:
+            </b>
+
+
+            <ul>
+
+            <li>Проектирование конструкций</li>
+
+            <li>Чертежи AutoCAD</li>
+
+            <li>BIM модель Revit</li>
+
+            <li>Расчёт ЛИРА 10</li>
+
+            <li>Календарный план строительства</li>
+
+            </ul>
+
+
+            <br>
+
+
+            <span class="tag">
+            AutoCAD
+            </span>
+
+
+            <span class="tag">
+            Revit
+            </span>
+
+
+            <span class="tag">
+            LIRA 10
+            </span>
+
+
+            <span class="tag">
+            Excel
+            </span>
+
+
+            </div>
+
+            """,
+            unsafe_allow_html=True)
+
+
+
+        st.write("")
+
+
+
+        # تحميل المشروع
+
+
+        if os.path.exists(
+        "2026.СТ-420004.Бадри Х.Х. ГЧ.pdf"
+        ):
+
+
+            with open(
+            "2026.СТ-420004.Бадри Х.Х. ГЧ.pdf",
+            "rb"
+            ) as file:
+
+
+                st.download_button(
+
+                    label="📄 Скачать полный проект",
+
+                    data=file,
+
+                    file_name=
+                    "Project_11_floor.pdf",
+
+                    mime=
+                    "application/pdf",
+
+                    use_container_width=True
+
+                )
+
+
+        else:
+
+
+            st.warning(
+            "Файл проекта не найден"
+            )
+
+
+
+
+    # ==========================
+    # باقي المشاريع
+    # ==========================
+
+    if project=="Project 2":
+
+
+        col1,col2 = st.columns([1,1.5])
+
+
+
+        with col1:
+
+
+            if os.path.exists("144.png"):
+
+                st.image(
+                    "144.png",
+                    use_container_width=True
+                )
+
+            else:
+
+                st.info(
+                "Добавьте изображение проекта"
+                )
+
+
+
+
+        with col2:
+
+
+            st.markdown("""
+            
+            <div class="project-card">
+
+
+            <h2>
+            🏢 Расчет и конструирование основных несущих конструкций одноэтажного промышленного здания
+            </h2>
+
+
+            <p>
+
+            
+            «Промышленное и гражданское строительство».
+
+            Проект включает разработку конструктивной схемы,
+            рабочей документации и инженерных расчётов.
+
+            </p>
+
+
+
+            <br>
+
+            <b>
+            Выполнено:
+            </b>
+
+
+            <ul>
+
+            <li>Проектирование конструкций</li>
+
+            <li>Чертежи AutoCAD</li>
+
+            <li>BIM модель Revit</li>
+
+            <li>Расчёт ЛИРА 10</li>
+
+            
+
+            </ul>
+
+
+            <br>
+
+
+            <span class="tag">
+            AutoCAD
+            </span>
+
+
+            <span class="tag">
+            Revit
+            </span>
+
+
+            <span class="tag">
+            LIRA 10
+            </span>
+
+
+            <span class="tag">
+            Excel
+            </span>
+
+
+            </div>
+
+            """,
+            unsafe_allow_html=True)
+
+
+
+        st.write("")
+
+
+
+        # تحميل المشروع
+
+
+        if os.path.exists(
+        "ГЧ_ПП(4)_Бадри Х.Х..pdf"
+        ):
+
+
+            with open(
+            "ГЧ_ПП(4)_Бадри Х.Х..pdf",
+            "rb"
+            ) as file:
+
+
+                st.download_button(
+
+                    label="📄 Скачать полный проект",
+
+                    data=file,
+
+                    file_name=
+                    "Project_ПП(4).pdf",
+
+                    mime=
+                    "application/pdf",
+
+                    use_container_width=True
+
+                )
+
+
+        else:
+
+
+            st.warning(
+            "Файл проекта не найден"
+            )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    else:
+
+
+        st.info(
+        f"🚧 {project} скоро будет добавлен"
+        )
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ==========================================
+# PROJECT 2
+# ==========================================
+
+# col1, col2 = st.columns([1.1,1.8])
+
+# with col1:
+
+#     if os.path.exists("project2.png"):
+#         st.image("project2.png", use_container_width=True)
+#     else:
+#         st.info("Добавьте изображение project2.png")
+
+# with col2:
+
+#     st.markdown("""
+#     <div class="project-card">
+
+#     <h2>
+#     🏗 Название проекта
+#     </h2>
+
+#     <p>
+
+#     Краткое описание проекта...
+
+#     </p>
+
+#     <br>
+
+#     <b style="color:white;">Моя работа:</b>
+
+#     <ul style="color:#cbd5e1;font-size:17px;line-height:1.8">
+
+#     <li>...</li>
+
+#     <li>...</li>
+
+#     <li>...</li>
+
+#     <li>...</li>
+
+#     </ul>
+
+#     <br>
+
+#     <span class="tag">AutoCAD</span>
+#     <span class="tag">Revit</span>
+#     <span class="tag">Excel</span>
+
+#     </div>
+#     """, unsafe_allow_html=True)
+
+
+# st.write("")
+
+# if os.path.exists("Project2.pdf"):
+
+#     with open("Project2.pdf","rb") as pdf:
+
+#         st.download_button(
+
+#             "📄 Скачать проект",
+
+#             pdf,
+
+#             file_name="Project2.pdf",
+
+#             mime="application/pdf",
+
+#             key="project2"
+
+#         )
+
+
+
 
 
 #=========================================
@@ -1150,7 +1624,7 @@ elif selected=="Python":
 
 
 
-elif selected=="Видео":
+elif selected=="Медиа":
 
     st.header("🎥 Видео")
 
@@ -1159,6 +1633,7 @@ elif selected=="Видео":
 
 #=========================================
 #=========================================
+
 
 
 
@@ -1178,6 +1653,11 @@ elif selected=="Контакты":
 
 
 
+
+
+
+
+
 #=========================================
 #=========================================
 elif selected == "Сертификат":
@@ -1193,6 +1673,8 @@ elif selected == "Сертификат":
 
     with col2:
         st.info("🏅 Python")
+
+
 
 
 
