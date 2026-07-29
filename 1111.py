@@ -469,6 +469,23 @@ selected = option_menu(
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # ==============================
 # HOME
 # ==============================
@@ -712,9 +729,26 @@ translateY(0);
 Промышленное и гражданское строительство
 </h2>
 
+
+Добро пожаловать на мой профессиональный сайт.
+
+Цель данного сайта — показать мои реальные знания и практический опыт через выполненные проекты, инженерные расчёты, видео и примеры моей работы.
+
+Здесь я буду постепенно публиковать новые проекты, полезные материалы, инженерные решения и информацию, связанную со строительством, BIM-технологиями и автоматизацией инженерных процессов.
+
+Этот сайт является площадкой для обмена опытом, развития профессиональных навыков и демонстрации моего подхода к работе инженера.
+
+
+
+
+Сайт находится в процессе разработки. Первая версия будет официально опубликована .
 <h4>
-Выпускник 2026
+01.08.2026
 </h4>
+
+В следующих обновлениях планируется добавить новые проекты, дополнительные разделы и больше инженерных материалов.
+
+
 
 </div>
 
@@ -781,7 +815,7 @@ translateY(0);
 
 <div class="card">
 
-<h2>🏢🏢🏢🏢🏢🏢🏢</h2>
+<h2>🏢</h2>
 
 <h3>Инженер-конструктор</h3>
 
@@ -808,7 +842,7 @@ translateY(0);
 
 <div class="card">
 
-<h2>🏗️    🏗️🏗️🏗️🏗️🏗️🏗️🏗️</h2>
+<h2>🏗️ </h2>
 
 <h3> Инженер ПТО</h3>
 
@@ -835,7 +869,7 @@ translateY(0);
 
 <div class="card">
 
-<h2>💻💻💻💻💻</h2>
+<h2>💻</h2>
 
 <h3>Python</h3>
 
@@ -1347,6 +1381,13 @@ elif selected=="Проекты":
 
 
 
+
+
+
+
+
+
+
     # ==========================
     # باقي المشاريع
     # ==========================
@@ -1498,6 +1539,167 @@ elif selected=="Проекты":
 
 
 
+    # else:
+
+
+    #     st.info(
+    #     f"🚧 {project} скоро будет добавлен"
+    #     )
+
+
+
+
+
+
+
+    # ==========================
+    # باقي المشاريع
+    # ==========================
+
+    if project=="Project 3":
+
+
+        col1,col2 = st.columns([1,1.5])
+
+
+
+        with col1:
+
+
+            if os.path.exists("166.png"):
+
+                st.image(
+                    "166.png",
+                    use_container_width=True
+                )
+
+            else:
+
+                st.info(
+                "Добавьте изображение проекта"
+                )
+
+
+
+
+        with col2:
+
+
+            st.markdown("""
+            
+            <div class="project-card">
+
+
+            <h2>
+            🏢 Многоэтажное промышленное здание с железобетонным каркасом
+            </h2>
+
+
+            <p>
+
+            
+            «Промышленное и гражданское строительство».
+
+            Проект включает разработку конструктивной схемы,
+            рабочей документации и инженерных расчётов.
+
+            </p>
+
+
+
+            <br>
+
+            <b>
+            Выполнено:
+            </b>
+
+
+            <ul>
+
+            <li>Проектирование конструкций</li>
+
+            <li>Чертежи AutoCAD</li>
+
+            <li>BIM модель Revit</li>
+
+            <li>Расчёт ЛИРА 10</li>
+
+            
+
+            </ul>
+
+
+            <br>
+
+
+            <span class="tag">
+            AutoCAD
+            </span>
+
+
+            <span class="tag">
+            Revit
+            </span>
+
+
+            <span class="tag">
+            LIRA 10
+            </span>
+
+
+            <span class="tag">
+            Excel
+            </span>
+
+
+            </div>
+
+            """,
+            unsafe_allow_html=True)
+
+
+
+        st.write("")
+
+
+
+        # تحميل المشروع
+
+
+        if os.path.exists(
+        "ГЧ_Бадри Х.Х._СТ-320004(ЖБК).pdf"
+        ):
+
+
+            with open(
+            "ГЧ_Бадри Х.Х._СТ-320004(ЖБК).pdf",
+            "rb"
+            ) as file:
+
+
+                st.download_button(
+
+                    label="📄 Скачать полный проект",
+
+                    data=file,
+
+                    file_name=
+                    "Project_ГЧ.pdf",
+
+                    mime=
+                    "application/pdf",
+
+                    use_container_width=True
+
+                )
+
+
+        else:
+
+
+            st.warning(
+            "Файл проекта не найден"
+            )
 
 
 
@@ -1507,100 +1709,157 @@ elif selected=="Проекты":
 
 
 
+    # ==========================
+    # باقي المشاريع
+    # ==========================
+
+    if project=="Project 4":
 
 
-    else:
-
-
-        st.info(
-        f"🚧 {project} скоро будет добавлен"
-        )
-
-
-
+        col1,col2 = st.columns([1,1.5])
 
 
 
+        with col1:
+
+
+            if os.path.exists("177.png"):
+
+                st.image(
+                    "177.png",
+                    use_container_width=True
+                )
+
+            else:
+
+                st.info(
+                "Добавьте изображение проекта"
+                )
 
 
 
 
+        with col2:
+
+
+            st.markdown("""
+            
+            <div class="project-card">
+
+
+            <h2>
+            🏢 Расчет и конструирование железобетонных конструкций одноэтажного промышленного здания в г. Магнитогорск
+            </h2>
+
+
+            <p>
+
+            
+            «Промышленное и гражданское строительство».
+
+            Проект включает разработку конструктивной схемы,
+            рабочей документации и инженерных расчётов.
+
+            </p>
 
 
 
-# ==========================================
-# PROJECT 2
-# ==========================================
+            <br>
 
-# col1, col2 = st.columns([1.1,1.8])
-
-# with col1:
-
-#     if os.path.exists("project2.png"):
-#         st.image("project2.png", use_container_width=True)
-#     else:
-#         st.info("Добавьте изображение project2.png")
-
-# with col2:
-
-#     st.markdown("""
-#     <div class="project-card">
-
-#     <h2>
-#     🏗 Название проекта
-#     </h2>
-
-#     <p>
-
-#     Краткое описание проекта...
-
-#     </p>
-
-#     <br>
-
-#     <b style="color:white;">Моя работа:</b>
-
-#     <ul style="color:#cbd5e1;font-size:17px;line-height:1.8">
-
-#     <li>...</li>
-
-#     <li>...</li>
-
-#     <li>...</li>
-
-#     <li>...</li>
-
-#     </ul>
-
-#     <br>
-
-#     <span class="tag">AutoCAD</span>
-#     <span class="tag">Revit</span>
-#     <span class="tag">Excel</span>
-
-#     </div>
-#     """, unsafe_allow_html=True)
+            <b>
+            Выполнено:
+            </b>
 
 
-# st.write("")
+            <ul>
 
-# if os.path.exists("Project2.pdf"):
+            <li>Проектирование конструкций</li>
 
-#     with open("Project2.pdf","rb") as pdf:
+            <li>Чертежи AutoCAD</li>
 
-#         st.download_button(
+            <li>BIM модель Revit</li>
 
-#             "📄 Скачать проект",
+            <li>Расчёт ЛИРА 10</li>
 
-#             pdf,
+            
 
-#             file_name="Project2.pdf",
+            </ul>
 
-#             mime="application/pdf",
 
-#             key="project2"
+            <br>
 
-#         )
+
+            <span class="tag">
+            AutoCAD
+            </span>
+
+
+            <span class="tag">
+            Revit
+            </span>
+
+
+            <span class="tag">
+            LIRA 10
+            </span>
+
+
+            <span class="tag">
+            Excel
+            </span>
+
+
+            </div>
+
+            """,
+            unsafe_allow_html=True)
+
+
+
+        st.write("")
+
+
+
+        # تحميل المشروع
+
+
+        if os.path.exists(
+        "ГЧ.pdf"
+        ):
+
+
+            with open(
+            "ГЧ.pdf",
+            "rb"
+            ) as file:
+
+
+                st.download_button(
+
+                    label="📄 Скачать полный проект",
+
+                    data=file,
+
+                    file_name=
+                    "Project_ГЧ.pdf",
+
+                    mime=
+                    "application/pdf",
+
+                    use_container_width=True
+
+                )
+
+
+        else:
+
+
+            st.warning(
+            "Файл проекта не найден"
+            )
+
+
+
 
 
 
@@ -1626,81 +1885,218 @@ elif selected=="Python":
 
 elif selected=="Медиа":
 
-    st.header("🎥 Видео")
+    st.markdown("""
+    <style>
 
-    st.write("Видео с YouTube.")
+    .media-card{
 
+        background:
+        rgba(30,41,59,.85);
 
-#=========================================
-#=========================================
+        padding:35px;
 
+        border-radius:30px;
 
+        color:white;
 
+        box-shadow:
+        0 20px 40px rgba(0,0,0,.4);
 
-elif selected=="Контакты":
+        text-align:center;
 
-    st.header("☎ Контакты")
-
-    st.write("""
-📧 Email
-
-💼 Telegram
-
-🌐 LinkedIn
-
-📂 GitHub
-""")
+    }
 
 
+    .media-title{
+
+        font-size:45px;
+
+        font-weight:900;
+
+        color:white;
+
+    }
 
 
+    .media-sub{
+
+        color:#94a3b8;
+
+        font-size:20px;
+
+        margin-bottom:30px;
+
+    }
 
 
+    </style>
+    """, unsafe_allow_html=True)
 
 
-#=========================================
-#=========================================
-elif selected == "Сертификат":
-
-    st.header("📜 Сертификат")
-
-    st.write("Здесь будут размещены мои сертификаты.")
-
-    col1, col2 = st.columns(2)
-
-    with col1:
-        st.info("🏅 Revit")
-
-    with col2:
-        st.info("🏅 Python")
-
-
-
-
-
-
-
-#=========================================
-#=========================================
-
-
-
-elif selected == "Языки":
-
-    st.header("🌍 Языки")
 
     st.markdown("""
-### 🇪🇬 Арабский
-Родной язык
+    <div class="media-card">
 
----
+    <div class="media-title">
+    🎥 Видео
+    </div>
 
-### 🇬🇧 Английский
-Средний уровень (B1)
+    <div class="media-sub">
+    Расчет фермы | Structural Analysis | LIRA 10
+    </div>
 
----
+    </div>
 
-### 🇷🇺 Русский
-Средний уровень (B1)
-Продолжаю активно совершенствовать язык в профессиональной сфере.
-""")
+    """, unsafe_allow_html=True)
+
+
+
+    st.write("")
+
+
+
+    # YouTube Video
+
+    st.video(
+        "https://youtu.be/FUQH9DWbkg4"
+    )
+
+
+
+    st.write("")
+
+
+    st.markdown("""
+    <div class="media-card">
+
+    <h2>
+    📐 Расчет фермы
+    </h2>
+
+
+    <p>
+
+    Демонстрация инженерного расчета металлической фермы.
+    В видео показан процесс создания расчетной схемы,
+    задания нагрузок и анализа результатов.
+
+    </p>
+
+
+    <br>
+
+
+    <span style="
+    background:#2563eb;
+    padding:8px 18px;
+    border-radius:20px;
+    margin:5px;
+    ">
+
+    LIRA 10
+
+    </span>
+
+
+    <span style="
+    background:#06b6d4;
+    padding:8px 18px;
+    border-radius:20px;
+    margin:5px;
+    ">
+
+    Structural Design
+
+    </span>
+
+
+    <span style="
+    background:#2563eb;
+    padding:8px 18px;
+    border-radius:20px;
+    margin:5px;
+    ">
+
+    Python
+
+    </span>
+
+
+    </div>
+
+    """, unsafe_allow_html=True)
+
+
+#=========================================
+#=========================================
+
+
+
+
+# elif selected=="Контакты":
+
+#     st.header("☎ Контакты")
+
+#     st.write("""
+# 📧 Email
+
+# 💼 Telegram
+
+# 🌐 LinkedIn
+
+# 📂 GitHub
+# """)
+
+
+
+
+
+
+
+
+#=========================================
+#=========================================
+# elif selected == "Сертификат":
+
+#     st.header("📜 Сертификат")
+
+#     st.write("Здесь будут размещены мои сертификаты.")
+
+#     col1, col2 = st.columns(2)
+
+#     with col1:
+#         st.info("🏅 Revit")
+
+#     with col2:
+#         st.info("🏅 Python")
+
+
+
+
+
+
+
+#=========================================
+#=========================================
+
+
+
+# elif selected == "Языки":
+
+#     st.header("🌍 Языки")
+
+#     st.markdown("""
+# ### 🇪🇬 Арабский
+# Родной язык
+
+# ---
+
+# ### 🇬🇧 Английский
+# Средний уровень (B1)
+
+# ---
+
+# ### 🇷🇺 Русский
+# Средний уровень (B1)
+# Продолжаю активно совершенствовать язык в профессиональной сфере.
+# """)
