@@ -1882,16 +1882,24 @@ elif selected=="Python":
 #=========================================
 
 
-
-elif selected=="Медиа":
+# ```python
+elif selected == "Медиа":
 
     st.markdown("""
     <style>
 
-    .media-card{
+    /* =========================
+       MEDIA HEADER
+       ========================= */
+
+    .media-header{
 
         background:
-        rgba(30,41,59,.85);
+        linear-gradient(
+            135deg,
+            rgba(30,41,59,.95),
+            rgba(15,23,42,.95)
+        );
 
         padding:35px;
 
@@ -1899,11 +1907,12 @@ elif selected=="Медиа":
 
         color:white;
 
-        box-shadow:
-        0 20px 40px rgba(0,0,0,.4);
-
         text-align:center;
 
+        box-shadow:
+        0 20px 45px rgba(0,0,0,.4);
+
+        margin-bottom:40px;
     }
 
 
@@ -1915,6 +1924,8 @@ elif selected=="Медиа":
 
         color:white;
 
+        margin-bottom:8px;
+
     }
 
 
@@ -1922,9 +1933,111 @@ elif selected=="Медиа":
 
         color:#94a3b8;
 
-        font-size:20px;
+        font-size:19px;
 
-        margin-bottom:30px;
+    }
+
+
+    /* =========================
+       VIDEO CARD
+       ========================= */
+
+    .video-card{
+
+        background:
+        rgba(30,41,59,.85);
+
+        backdrop-filter:blur(15px);
+
+        border-radius:25px;
+
+        padding:25px;
+
+        margin-bottom:15px;
+
+        box-shadow:
+        0 15px 40px rgba(0,0,0,.35);
+
+        border:
+        1px solid rgba(255,255,255,.05);
+
+        transition:.3s ease;
+
+    }
+
+
+    .video-card:hover{
+
+        transform:translateY(-5px);
+
+        box-shadow:
+        0 25px 50px rgba(0,0,0,.45);
+
+    }
+
+
+    .video-title{
+
+        color:white;
+
+        font-size:28px;
+
+        font-weight:800;
+
+        margin-bottom:10px;
+
+        text-align:center;
+
+    }
+
+
+    .video-description{
+
+        color:#cbd5e1;
+
+        font-size:16px;
+
+        line-height:1.7;
+
+        text-align:center;
+
+        margin-bottom:20px;
+
+    }
+
+
+    /* =========================
+       TAGS
+       ========================= */
+
+    .video-tag{
+
+        display:inline-block;
+
+        padding:7px 15px;
+
+        margin:4px;
+
+        border-radius:20px;
+
+        background:#2563eb;
+
+        color:white;
+
+        font-size:13px;
+
+        font-weight:700;
+
+    }
+
+
+    .tags-container{
+
+        text-align:center;
+
+        margin-top:15px;
+
+        margin-bottom:45px;
 
     }
 
@@ -1933,102 +2046,198 @@ elif selected=="Медиа":
     """, unsafe_allow_html=True)
 
 
+    # =====================================================
+    # HEADER
+    # =====================================================
 
     st.markdown("""
-    <div class="media-card">
+    <div class="media-header">
 
-    <div class="media-title">
-    🎥 Видео
+        <div class="media-title">
+            🎥 Медиа
+        </div>
+
+        <div class="media-sub">
+            Инженерные проекты, расчёты и автоматизация
+        </div>
+
     </div>
-
-    <div class="media-sub">
-    Расчет фермы | Structural Analysis | LIRA 10
-    </div>
-
-    </div>
-
     """, unsafe_allow_html=True)
 
 
+    # =====================================================
+    # VIDEOS
+    # =====================================================
 
-    st.write("")
+    videos = [
 
+        # =================================================
+        # VIDEO 1
+        # =================================================
 
+        {
+            "title":
+            "📐 Расчёт металлической фермы | LIRA 10",
 
-    # YouTube Video
+            "description":
+            """
+            Демонстрация инженерного расчёта металлической фермы.
+            В видео показан процесс создания расчётной схемы,
+            задания нагрузок и анализа результатов.
+            """,
 
-    st.video(
-        "https://youtu.be/FUQH9DWbkg4"
-    )
+            "url":
+            "https://youtu.be/FUQH9DWbkg4",
 
-
-
-    st.write("")
-
-
-    st.markdown("""
-    <div class="media-card">
-
-    <h2>
-    📐 Расчет фермы
-    </h2>
-
-
-    <p>
-
-    Демонстрация инженерного расчета металлической фермы.
-    В видео показан процесс создания расчетной схемы,
-    задания нагрузок и анализа результатов.
-
-    </p>
-
-
-    <br>
+            "tags":
+            [
+                "LIRA 10",
+                "Structural Design",
+                "Расчёты"
+            ]
+        },
 
 
-    <span style="
-    background:#2563eb;
-    padding:8px 18px;
-    border-radius:20px;
-    margin:5px;
-    ">
+        # =================================================
+        # VIDEO 2
+        # =================================================
 
-    LIRA 10
+        {
+            "title":
+            "📄 Автоматизация АОСР | Excel + Word",
 
-    </span>
+            "description":
+            """
+            Демонстрация автоматизации заполнения АОСР
+            с использованием Excel и Word.
+            Данные из Excel автоматически используются
+            для заполнения исполнительной документации.
+            """,
 
+            "url":
+            "https://www.youtube.com/watch?v=CkulkAB6OdU",
 
-    <span style="
-    background:#06b6d4;
-    padding:8px 18px;
-    border-radius:20px;
-    margin:5px;
-    ">
-
-    Structural Design
-
-    </span>
-
-
-    <span style="
-    background:#2563eb;
-    padding:8px 18px;
-    border-radius:20px;
-    margin:5px;
-    ">
-
-    Python
-
-    </span>
+            "tags":
+            [
+                "ПТО",
+                "АОСР",
+                "Excel",
+                "Word",
+                "Автоматизация"
+            ]
+        },
 
 
-    </div>
+    
 
-    """, unsafe_allow_html=True)
+
+
+        # =================================================
+        # VIDEO 3
+        # =================================================
+
+        {
+            "title":
+            "📄 Автоматизация АОСР | Excel + Word",
+
+            "description":
+            """
+            Демонстрация автоматизации заполнения АОСР
+            с использованием Excel и Word.
+            Данные из Excel автоматически используются
+            для заполнения исполнительной документации.
+            """,
+
+            "url":
+            "https://www.youtube.com/watch?v=qkhwPi5slX0",
+
+            "tags":
+            [
+                "ПТО",
+                "АОСР",
+                "Excel",
+                "Word",
+                "Автоматизация"
+            ]
+        }
+
+    ]
+
+
+
+    # =====================================================
+    # DISPLAY VIDEOS
+    # =====================================================
+
+    for video in videos:
+
+        # -----------------------------------------
+        # CARD HEADER
+        # -----------------------------------------
+
+        st.markdown(
+            f"""
+            <div class="video-card">
+
+                <div class="video-title">
+                    {video["title"]}
+                </div>
+
+                <div class="video-description">
+                    {video["description"]}
+                </div>
+
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+
+        # -----------------------------------------
+        # SMALL VIDEO
+        # -----------------------------------------
+
+        left, center, right = st.columns([1, 2, 1])
+
+        with center:
+
+            st.video(
+                video["url"]
+            )
+
+
+        # -----------------------------------------
+        # TAGS
+        # -----------------------------------------
+
+        tags_html = ""
+
+        for tag in video["tags"]:
+
+            tags_html += f"""
+            <span class="video-tag">
+                {tag}
+            </span>
+            """
+
+
+        st.markdown(
+            f"""
+            <div class="tags-container">
+                {tags_html}
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+# ```
+
 
 
 #=========================================
 #=========================================
+
+
+
 
 
 
