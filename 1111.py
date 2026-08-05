@@ -486,6 +486,17 @@ selected = option_menu(
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 # ==============================
 # HOME
 # ==============================
@@ -854,8 +865,15 @@ translateY(0);
 - 📄 Исполнительная документация<br>
 - 📄 АОСР<br>
 - 📄 Журналы работ<br>
-- 📄 ВОР
+- 📄 ВОР<br>
+- 📄 КС-2<br>
+- 📄 КС-3<br>
+- 📄 КС-6а<br>
+- 📄 Форм м-29<br>
+- 📄 ПОС<br>
+- 📄 ППР,ТК
 </p>
+
 
 </div>
 
@@ -885,6 +903,25 @@ translateY(0);
 </div>
 
 """,unsafe_allow_html=True)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1034,6 +1071,27 @@ elif selected=="Обо мне":
     📍 Готов к профессиональному развитию,
     участию в строительных проектах и работе в команде инженеров.
     """)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1194,13 +1252,13 @@ elif selected=="Проекты":
 
         [
 
-            "Project 1",
-            "Project 2",
-            "Project 3",
-            "Project 4",
-            "Project 5",
-            "Project 6",
-            "Project 7",
+            "ВКР",
+            "КР-1",
+            "КР-2",
+            "КР-3",
+            "ППР,ТК",
+            "Календарный план",
+            "ПОС",
             "Project 8",
             "Project 9",
             "Project 10"
@@ -1233,7 +1291,7 @@ elif selected=="Проекты":
     # ==========================
 
 
-    if project=="Project 1":
+    if project=="ВКР":
 
 
         col1,col2 = st.columns([1,1.5])
@@ -1392,7 +1450,7 @@ elif selected=="Проекты":
     # باقي المشاريع
     # ==========================
 
-    if project=="Project 2":
+    if project=="КР-1":
 
 
         col1,col2 = st.columns([1,1.5])
@@ -1556,7 +1614,7 @@ elif selected=="Проекты":
     # باقي المشاريع
     # ==========================
 
-    if project=="Project 3":
+    if project=="КР-2":
 
 
         col1,col2 = st.columns([1,1.5])
@@ -1713,7 +1771,7 @@ elif selected=="Проекты":
     # باقي المشاريع
     # ==========================
 
-    if project=="Project 4":
+    if project=="КР-3":
 
 
         col1,col2 = st.columns([1,1.5])
@@ -1859,6 +1917,500 @@ elif selected=="Проекты":
             )
 
 
+
+
+
+
+
+
+
+
+
+    # ==========================
+    # باقي المشاريع
+    # ==========================
+
+    if project=="ППР,ТК":
+
+
+        col1,col2 = st.columns([1,1.5])
+
+
+
+        with col1:
+
+
+            if os.path.exists("777.png"):
+
+                st.image(
+                    "777.png",
+                    use_container_width=True
+                )
+
+            else:
+
+                st.info(
+                "Добавьте изображение проекта"
+                )
+
+
+
+
+        with col2:
+
+
+            st.markdown("""
+            
+            <div class="project-card">
+
+
+            <h2>
+            🏢 Расчет и конструирование железобетонных конструкций одноэтажного промышленного здания в г. Магнитогорск
+            </h2>
+
+
+            <p>
+
+            
+            «Промышленное и гражданское строительство».
+
+            Проект включает разработку конструктивной схемы,
+            рабочей документации и инженерных расчётов.
+
+            </p>
+
+
+
+            <br>
+
+            <b>
+            Выполнено:
+            </b>
+
+
+            <ul>
+
+            <li>Проектирование конструкций</li>
+
+            <li>Чертежи AutoCAD</li>
+
+            <li>BIM модель Revit</li>
+
+            <li>Расчёт ЛИРА 10</li>
+
+            
+
+            </ul>
+
+
+            <br>
+
+
+            <span class="tag">
+            AutoCAD
+            </span>
+
+
+            <span class="tag">
+            Revit
+            </span>
+
+
+            <span class="tag">
+            LIRA 10
+            </span>
+
+
+            <span class="tag">
+            Excel
+            </span>
+
+
+            </div>
+
+            """,
+            unsafe_allow_html=True)
+
+
+
+        st.write("")
+
+
+
+        # تحميل المشروع
+
+
+        if os.path.exists(
+        "ГЧ.pdf"
+        ):
+
+
+            with open(
+            "ГЧ_Бадри Х.Х._СТ-320004.pdf",
+            "rb"
+            ) as file:
+
+
+                st.download_button(
+
+                    label="📄 Скачать полный проект",
+
+                    data=file,
+
+                    file_name=
+                    "Project_ГЧ.pdf",
+
+                    mime=
+                    "application/pdf",
+
+                    use_container_width=True
+
+                )
+
+
+        else:
+
+
+            st.warning(
+            "Файл проекта не найден"
+            )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # ==========================
+    # باقي المشاريع
+    # ==========================
+
+    if project=="Календарный план":
+
+
+        col1,col2 = st.columns([1,1.5])
+
+
+
+        with col1:
+
+
+            if os.path.exists("888.png"):
+
+                st.image(
+                    "888.png",
+                    use_container_width=True
+                )
+
+            else:
+
+                st.info(
+                "Добавьте изображение проекта"
+                )
+
+
+
+
+        with col2:
+
+
+            st.markdown("""
+            
+            <div class="project-card">
+
+
+            <h2>
+            🏢 Расчет и конструирование железобетонных конструкций одноэтажного промышленного здания в г. Магнитогорск
+            </h2>
+
+
+            <p>
+
+            
+            «Промышленное и гражданское строительство».
+
+            Проект включает разработку конструктивной схемы,
+            рабочей документации и инженерных расчётов.
+
+            </p>
+
+
+
+            <br>
+
+            <b>
+            Выполнено:
+            </b>
+
+
+            <ul>
+
+            <li>Проектирование конструкций</li>
+
+            <li>Чертежи AutoCAD</li>
+
+            <li>BIM модель Revit</li>
+
+            <li>Расчёт ЛИРА 10</li>
+
+            
+
+            </ul>
+
+
+            <br>
+
+
+            <span class="tag">
+            AutoCAD
+            </span>
+
+
+            <span class="tag">
+            Revit
+            </span>
+
+
+            <span class="tag">
+            LIRA 10
+            </span>
+
+
+            <span class="tag">
+            Excel
+            </span>
+
+
+            </div>
+
+            """,
+            unsafe_allow_html=True)
+
+
+
+        st.write("")
+
+
+
+        # تحميل المشروع
+
+
+        if os.path.exists(
+        "ГЧ.pdf"
+        ):
+
+
+            with open(
+            "Календарный план.pdf",
+            "rb"
+            ) as file:
+
+
+                st.download_button(
+
+                    label="📄 Скачать полный проект",
+
+                    data=file,
+
+                    file_name=
+                    "Project_ГЧ.pdf",
+
+                    mime=
+                    "application/pdf",
+
+                    use_container_width=True
+
+                )
+
+
+        else:
+
+
+            st.warning(
+            "Файл проекта не найден"
+            )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # ==========================
+    # باقي المشاريع
+    # ==========================
+
+    if project=="ПОС":
+
+
+        col1,col2 = st.columns([1,1.5])
+
+
+
+        with col1:
+
+
+            if os.path.exists("999.png"):
+
+                st.image(
+                    "999.png",
+                    use_container_width=True
+                )
+
+            else:
+
+                st.info(
+                "Добавьте изображение проекта"
+                )
+
+
+
+
+        with col2:
+
+
+            st.markdown("""
+            
+            <div class="project-card">
+
+
+            <h2>
+            🏢 Расчет и конструирование железобетонных конструкций одноэтажного промышленного здания в г. Магнитогорск
+            </h2>
+
+
+            <p>
+
+            
+            «Промышленное и гражданское строительство».
+
+            Проект включает разработку конструктивной схемы,
+            рабочей документации и инженерных расчётов.
+
+            </p>
+
+
+
+            <br>
+
+            <b>
+            Выполнено:
+            </b>
+
+
+            <ul>
+
+            <li>Проектирование конструкций</li>
+
+            <li>Чертежи AutoCAD</li>
+
+            <li>BIM модель Revit</li>
+
+            <li>Расчёт ЛИРА 10</li>
+
+            
+
+            </ul>
+
+
+            <br>
+
+
+            <span class="tag">
+            AutoCAD
+            </span>
+
+
+            <span class="tag">
+            Revit
+            </span>
+
+
+            <span class="tag">
+            LIRA 10
+            </span>
+
+
+            <span class="tag">
+            Excel
+            </span>
+
+
+            </div>
+
+            """,
+            unsafe_allow_html=True)
+
+
+
+        st.write("")
+
+
+
+        # تحميل المشروع
+
+
+        if os.path.exists(
+        "ГЧ.pdf"
+        ):
+
+
+            with open(
+            "ИТОГИ_ГЧ_ПП6.pdf",
+            "rb"
+            ) as file:
+
+
+                st.download_button(
+
+                    label="📄 Скачать полный проект",
+
+                    data=file,
+
+                    file_name=
+                    "Project_ГЧ.pdf",
+
+                    mime=
+                    "application/pdf",
+
+                    use_container_width=True
+
+                )
+
+
+        else:
+
+
+            st.warning(
+            "Файл проекта не найден"
+            )
 
 
 
@@ -2159,9 +2711,48 @@ elif selected == "Медиа":
                 "Word",
                 "Автоматизация"
             ]
+        },
+
+    
+
+
+
+
+
+        # =================================================
+        # VIDEO 4
+        # =================================================
+
+        {
+            "title":
+            "📄 Автоматизация АОСР | Excel + Word",
+
+            "description":
+            """
+            Демонстрация автоматизации заполнения АОСР
+            с использованием Excel и Word.
+            Данные из Excel автоматически используются
+            для заполнения исполнительной документации.
+            """,
+
+            "url":
+            "https://www.youtube.com/watch?v=wg6i9cqPfzQ",
+
+            "tags":
+            [
+                "ПТО",
+                "АОСР",
+                "Excel",
+                "Word",
+                "Автоматизация"
+            ]
         }
 
     ]
+
+
+
+
 
 
 
